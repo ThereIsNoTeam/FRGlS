@@ -3,11 +3,8 @@
 *.lo
 *.o
 *.obj
-*.layout
-*.cbp
 obj/
 bin/
-*.depend
 
 # Precompiled Headers
 *.gch
@@ -16,7 +13,6 @@ bin/
 # Compiled Dynamic libraries
 *.so
 *.dylib
-*.dll
 
 # Fortran module files
 *.mod
@@ -26,7 +22,6 @@ bin/
 *.lai
 *.la
 *.a
-*.lib
 
 # Executables
 *.out
@@ -35,7 +30,6 @@ bin/
 # Another
 *.VC.VC.opendb
 *.suo
-*.sln
 *.VC.db
 *.pdb
 *.ipdb
@@ -46,4 +40,11 @@ bin/
 *.idb
 *.ilk
 *.enc
+*.sln
 *.lastcodeanalysissucceeded
+*.vcxproj
+*.vcxproj.filters
+build\x64\Debug\FRGlS.lib
+build\x64\Release\FRGlS.lib
+build\x86\Debug\FRGlS.lib
+build\x86\Release\FRGlS.lib
