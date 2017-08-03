@@ -1,9 +1,11 @@
 #include "ConnectionMenu.h"
 #include "Exceptions.h"
+using std::swap;
 
-ConnectionMenu::ConnectionMenu()
+void swap(ConnectionMenu& a, ConnectionMenu& b)
 {
-
+	swap(a.address, b.address);
+	swap(a.username, b.username);
 }
 
 ConnectionMenu::ConnectionMenu(std::shared_ptr<sf::TcpSocket> socket, std::shared_ptr<std::wofstream> ptr, std::wstring address, std::wstring username, std::wstring password) : socket(socket), logFile(ptr), address(address), username(username), password(password)
@@ -16,18 +18,18 @@ ConnectionMenu::~ConnectionMenu()
 	
 }
 
-ConnectionMenu& ConnectionMenu::operator=(ConnectionMenu assg) &
+ConnectionMenu& ConnectionMenu::operator=(const ConnectionMenu &assg) &
 {
-	std::swap(assg, *this);
+	this->logFile = assg.logFile;
+	this->address = assg.address;
+	this->username = assg.username;
 	return *this;
 }
 
 ConnectionMenu& ConnectionMenu::operator=(ConnectionMenu&& assg) &
 {
-	if (this->logFile != assg.logFile)
-		this->logFile = assg.logFile;
-	this->address = assg.address;
-	this->username = assg.username;
+	this->logFile = assg.logFile;
+	std::swap(assg, *this);
 	return *this;
 }
 
