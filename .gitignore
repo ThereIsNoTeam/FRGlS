@@ -44,7 +44,7 @@ bin/
 *.lastcodeanalysissucceeded
 *.vcxproj
 *.vcxproj.filters
-build\x64\Debug\FRGlS.lib
-build\x64\Release\FRGlS.lib
-build\x86\Debug\FRGlS.lib
-build\x86\Release\FRGlS.lib
+build/x64/Debug/FRGlS.lib
+build/x64/Release/FRGlS.lib
+build/x86/Debug/FRGlS.lib
+build/x86/Release/FRGlS.lib
