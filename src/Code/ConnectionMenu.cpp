@@ -16,12 +16,9 @@ ConnectionMenu::~ConnectionMenu()
 	
 }
 
-ConnectionMenu& ConnectionMenu::operator=(ConnectionMenu& assg) &
+ConnectionMenu& ConnectionMenu::operator=(ConnectionMenu assg) &
 {
-	if (this->logFile != assg.logFile)
-		this->logFile = assg.logFile;
-	this->address = assg.address;
-	this->username = assg.username;
+	std::swap(assg, *this);
 	return *this;
 }
 
