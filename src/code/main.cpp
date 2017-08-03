@@ -1,25 +1,26 @@
-#include <SFML/Graphics.hpp>
-
+//Powinniœmy uwzglêdniæ logi: wersjê dla u¿ytkownika i do debuggowania(niemal w ka¿dej funkcji)
+#include "Cmain.h"
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
-    sf::CircleShape shape(100.f);
-    shape.setFillColor(sf::Color::Green);
-
-    while (window.isOpen())
-    {
-        sf::Event event;
-        while (window.pollEvent(event))
-        {
-            if (event.type == sf::Event::Closed)
-                window.close();
-        }
-
-        window.clear();
-        window.draw(shape);
-        window.display();
-    }
-
-    return 0;
+	Cmain main;
+	try
+	{
+		main.FirstConnectLoop();
+	}
+	catch (w_err err)
+	{
+		#ifdef _WIN32
+		MessageBoxW(NULL, err.msg.c_str(), NULL, MB_ICONERROR);
+		#endif
+		return -1;
+	}
+	catch (...)
+	{
+		#ifdef _WIN32
+		MessageBoxW(NULL, L"Unknown critical error", NULL, MB_ICONERROR);
+		#endif
+		return -1;
+	}
+	return 0;
 }
