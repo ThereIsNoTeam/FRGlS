@@ -17,8 +17,8 @@ private:
 	std::vector<ConnectionMenu> connections;							//Gracz mo¿e sobie generowaæ ró¿ne okienka
 	sf::RenderWindow window;											//Okno gry, na nim s¹ renderowane obrazki
 	sf::Event mainevent;												//Przetwarza input uzytkownika
-	std::shared_ptr<sf::TcpSocket> socket 
-		= std::shared_ptr<sf::TcpSocket>(new sf::TcpSocket);			//Zapewnia po³¹czenie miêdzy serwerem a graczem
+	std::shared_ptr<sf::UdpSocket> socket 
+		= std::shared_ptr<sf::UdpSocket>(new sf::UdpSocket);			//Zapewnia po³¹czenie miêdzy serwerem a graczem
 	enum class gamestate {CONNECT, MENU, PLAY};							//Zale¿nie od tego niektóre elementy dzia³aj¹ w ró¿ny sposób; CONNECT = 0, MENU = 1, PLAY = 2
 	bool running = true;												//Zmiana tej wartoœci koñczy dzia³anie programu
 };
