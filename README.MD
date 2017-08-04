@@ -33,7 +33,7 @@ Its purpose is to keep the user authenticated in order to notify if there is:
 Notifications come in subtle sound and (depending on the platform) a message near the taskbar
 
 ## Documentation
-Full documentation can be found on our [wiki](https://thereisnoteam.github.io/FRGIS/) or under [docs folder](https://github.com/ThereIsNoTeam/FRGIS/docs).
+Full documentation can be found on our [wiki](https://thereisnoteam.github.io/FRGIS/) or under [docs folder](https://github.com/ThereIsNoTeam/FRGIS/tree/master/docs).
 
 ## Building
 You can build the porgram by yourself, to keep it simple download [project files](https://drive.google.com/drive/folders/0B-MGpOfN18ijYjVRemkxTlE4dzQ?usp=sharing) and drop them into src/
