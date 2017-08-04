@@ -7,9 +7,9 @@ class Button
 public:
 	Button();
 	Button(std::wstring path);
-	//virtual void OnClick() &;								
+	//virtual void OnRelease() &;								
 private:
 	int gamestate;											//Na jakim gamestate button jest aktywny
 	sf::Texture textures[3];
-	sf::Sprite sprites[3];									//3 obrazki dla nieaktywnego, najechanegho i wciœniêtego
+	sf::Sprite sprites[3];									//3 obrazki dla nieaktywnego, najechanego i wciœniêtego
 };
