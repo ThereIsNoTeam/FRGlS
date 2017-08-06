@@ -8,7 +8,7 @@ void swap(ConnectionMenu& a, ConnectionMenu& b)
 	swap(a.username, b.username);
 }
 
-ConnectionMenu::ConnectionMenu(std::shared_ptr<sf::TcpSocket> socket, std::shared_ptr<std::wofstream> ptr, std::wstring address, std::wstring username, std::wstring password) : socket(socket), logFile(ptr), address(address), username(username), password(password)
+ConnectionMenu::ConnectionMenu(std::shared_ptr<sf::UdpSocket> socket, std::shared_ptr<std::wofstream> ptr, std::wstring address, std::wstring username, std::wstring password) : socket(socket), logFile(ptr), address(address), username(username), password(password)
 {
 	
 }

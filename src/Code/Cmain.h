@@ -10,7 +10,7 @@ class Cmain
 {
 public:
 	Cmain();
-	std::shared_ptr<std::wofstream> logFile;							//Plik z logami, je¿eli bêdziemy bawiæ siê w wielow¹tkowoœæ to trzeba z tym uwa¿aæ							
+	std::shared_ptr<std::wofstream> logFile;							//Plik z logami, je¿eli bêdziemy bawiæ siê w wielow¹tkowoœæ to trzeba z tym uwa¿aæ.							
 	int FirstConnectLoop() noexcept;									//Menu kiedy gracz jeszcze siê nie po³¹czy³ z ¿adnym serwerem. Powinniœmy zadbaæ, ¿eby rzeczywiœcie funkcja by³a noexcept								
 	int GameLoop();														//G³ówna pêtla gry
 private:

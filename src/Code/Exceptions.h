@@ -4,14 +4,20 @@
 #ifdef _WIN32
 #define NOMINMAX
 #include "Windows.h"
-
 inline void warn(const std::wstring &msg)
 {
 	MessageBoxW(NULL, msg.c_str(), L"Warn", MB_ICONINFORMATION);
-	auto *p = &warn;
+}
+inline void warn(const std::string &msg)
+{
+	MessageBoxW(NULL, std::wstring(msg.cbegin(), msg.cend()).c_str(), L"Warn", MB_ICONINFORMATION);
 }
 #else
 inline void warn(const std::wstring &msg)
+{
+	//wyœwietlanie dla innych platform
+}
+inline void warn(const std::string &msg)
 {
 	//wyœwietlanie dla innych platform
 }

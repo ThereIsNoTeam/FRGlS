@@ -7,7 +7,7 @@ class ConnectionMenu
 {
 public:
 	friend void swap(ConnectionMenu &a, ConnectionMenu &b);
-	ConnectionMenu() {};
+	ConnectionMenu() = default;
 	ConnectionMenu(const ConnectionMenu &copy) { *this = copy; };
 	ConnectionMenu(ConnectionMenu &&copy) { *this = copy; };
 	ConnectionMenu(std::shared_ptr<sf::UdpSocket> socket, std::shared_ptr<std::wofstream> ptr, std::wstring address = L"", std::wstring username = L"", std::wstring password = L"");
