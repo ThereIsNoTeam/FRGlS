@@ -32,7 +32,6 @@ Its purpose is to keep the user authenticated in order to notify if there is:
 - a new response to user's thread or private message
 Notifications come in subtle sound and (depending on the platform) a message near the taskbar
 
-## Documentation
 Full documentation can be found on our [wiki](https://thereisnoteam.github.io/FRGIS/) or under [docs folder](https://github.com/ThereIsNoTeam/FRGIS/tree/master/docs).
 
 ## Building
