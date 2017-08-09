@@ -30,6 +30,7 @@ Its purpose is to keep the user authenticated in order to notify if there is:
 - a new thread pinned to player by Game Master
 - a new private message inbox
 - a new response to user's thread or private message
+
 Notifications come in subtle sound and (depending on the platform) a message near the taskbar
 
 ## Documentation
