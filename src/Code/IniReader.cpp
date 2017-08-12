@@ -1,14 +1,14 @@
 #include "INIReader.h"
 #include "Exceptions.h"
 
-void INIReader::read(const std::wstring &path, std::map<const std::string, std::map<const std::string, void*>> &vals)
+void INIReader::read(const std::wstring &path, const std::map<const std::string, const std::map<const std::string, void*>> &vals)
 {
-	std::ifstream ini(path);
+	std::ifstream ini(path); //Na standardziej starszym ni¿ C++11 nie mo¿na u¿yæ zmiennej "path", bo strumienie nie akceptuj¹ ci¹gów znaków z standardu
 	std::string buf, paragraph;
 	while (std::getline(ini, buf))
 	{
 		std::string::size_type pos;
-		while (pos = buf.find(' ')) buf.erase(pos, 1U);
+		while ((pos = buf.find(' ')) != std::string::npos) buf.erase(pos, 1U);
 		try{
 			if (buf.empty()) continue;
 			if (buf[0] == '[') {

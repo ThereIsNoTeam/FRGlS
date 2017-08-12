@@ -5,6 +5,7 @@
 #include "ConnectionMenu.h"
 #include "MultiTextBox.h"
 #include "Exceptions.h"
+#include "INIReader.h"
 
 class Cmain
 {
